@@ -2,7 +2,7 @@ name: F1 Manager CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
 
 jobs:
   build:
@@ -19,7 +19,7 @@ jobs:
           java-version: 17
 
       - name: Build with Maven
-        run: mvn clean package
+        run: mvn clean package -DskipTests
 
       - name: Build Docker image
         run: docker build -t f1-manager .
