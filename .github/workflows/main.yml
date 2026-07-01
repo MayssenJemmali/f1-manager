@@ -20,6 +20,9 @@ jobs:
 
       - name: Build with Maven
         run: mvn clean package -DskipTests
+        
+      - name: Debug - list target contents
+        run: ls -la target/
 
       - name: Build Docker image
         run: docker build -t f1-manager .
