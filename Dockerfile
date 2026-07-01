@@ -1,5 +1,5 @@
 # Use OpenJDK 17 slim image (matches Java version in pom.xml)
-FROM openjdk:17-jdk-slim
+FROM eclipse-temurin:17-jdk
 
 # Copy pre-built JAR from target/ directory into the image as app.jar
 COPY target/*.jar app.jar
